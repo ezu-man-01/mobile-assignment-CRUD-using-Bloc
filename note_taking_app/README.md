@@ -1,13 +1,32 @@
-# mobile-assignment-CRUD-using-Bloc
+# Note Taking App
 
-## List Screen
-![List Screen](screenshots/list_screen.png)
+A clean Flutter note-taking application built using BLoC state management.
 
-## Delete
-![Delete](screenshots/delete.png)
+## Features
+- Add notes
+- Edit notes
+- Delete notes
+- View note details
+- Modern UI
+- BLoC state management
 
-## Edit Screen
-![Edit](screenshots/edit.png)
+---
 
-## Detail Screen
-![Edit](screenshots/detail_screen.png)
+## Screenshots
+
+### List Screen
+<img src="screenshots/list_screen.png" width="300">
+
+### Detail Screen
+<img src="screenshots/detail_screen.png" width="300">
+
+### Edit Screen
+<img src="screenshots/edit.png" width="300">
+
+### Delete Feature
+<img src="screenshots/delete.png" width="300">
+
+---
+
+## Name
+ezana mulatu ugr/5768/16 section 2
