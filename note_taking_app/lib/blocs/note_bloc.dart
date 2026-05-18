@@ -9,7 +9,7 @@ part 'note_state.dart';
 class NoteBloc extends Bloc<NoteEvent, NoteState> {
   final ApiService apiService;
 
-  final List<Note> _notes = [];
+  List<Note> _notes = [];
 
   NoteBloc({required this.apiService}) : super(NoteInitial()) {
     on<FetchNotes>(_onFetchNotes);
@@ -22,16 +22,29 @@ class NoteBloc extends Bloc<NoteEvent, NoteState> {
     emit(NoteLoading());
 
     try {
-      final notes = await apiService.fetchNotes();
-
-      _notes
-        ..clear()
-        ..addAll(notes);
+      final notes = [
+        const Note(
+          id: 1,
+          title: 'Flutter Study Plan',
+          content: 'Finish Bloc architecture and Dio networking.',
+        ),
+        const Note(
+          id: 2,
+          title: 'Trading Reminder',
+          content: 'Check XAUUSD trend before London session.',
+        ),
+        const Note(
+          id: 3,
+          title: 'Content Ideas',
+          content: 'Record study technique videos.',
+        ),
+      ];
+      _notes = notes.take(3).toList();
 
       if (_notes.isEmpty) {
         emit(NoteEmpty());
       } else {
-        emit(NoteLoaded(List.from(_notes)));
+        emit(NoteLoaded(_notes));
       }
     } catch (e) {
       emit(NoteOperationFailure(e.toString()));
@@ -52,12 +65,12 @@ class NoteBloc extends Bloc<NoteEvent, NoteState> {
 
   Future<void> _onUpdateNote(UpdateNote event, Emitter<NoteState> emit) async {
     try {
-      final updatedNote = await apiService.updateNote(event.note);
+      final updated = await apiService.updateNote(event.note);
 
-      final index = _notes.indexWhere((note) => note.id == updatedNote.id);
+      final index = _notes.indexWhere((note) => note.id == updated.id);
 
       if (index != -1) {
-        _notes[index] = updatedNote;
+        _notes[index] = updated;
       }
 
       emit(NoteLoaded(List.from(_notes)));
