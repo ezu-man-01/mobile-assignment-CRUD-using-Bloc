@@ -15,16 +15,16 @@ A clean Flutter note-taking application built using BLoC state management.
 ## Screenshots
 
 ### List Screen
-<img src="screenshots/list_screen.png" width="300">
+<img src="note_taking_app/screenshots/list_screen.png" width="300">
 
 ### Detail Screen
-<img src="screenshots/detail_screen.png" width="300">
+<img src="note_taking_app/screenshots/detail_screen.png" width="300">
 
 ### Edit Screen
-<img src="screenshots/edit.png" width="300">
+<img src="note_taking_app/screenshots/edit.png" width="300">
 
-### Delete Feature
-<img src="screenshots/delete.png" width="300">
+### Delete 
+<img src="note_taking_app/screenshots/delete.png" width="300">
 
 ---
 
