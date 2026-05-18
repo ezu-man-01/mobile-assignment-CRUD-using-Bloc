@@ -1,3 +1,3 @@
 # mobile-assignment-CRUD-using-Bloc
-![alt text](image-1.png)
-![alt text](image-1.png)
+![alt text](detail_screen.png)
+![alt text](list_screen.png)
