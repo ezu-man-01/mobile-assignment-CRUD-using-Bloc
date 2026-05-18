@@ -1,4 +1,4 @@
-# Note Taking App
+# mobile-assignment-CRUD-using-provider
 
 A clean Flutter note-taking application built using BLoC state management.
 
